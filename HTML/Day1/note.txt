@@ -1,0 +1,12 @@
+<html>  opening tag
+</html> closing tag
+
+<html>Hello</html> html element
+<title>Ht</title> title element
+
+<br /> self closing tag or empty tag
+
+For prettier config
+shift + otp + F
+
+"editor.formatOnSave": true
