@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 2rem;
+      }
+      p::first-line {
+        background-color: pink;
+      }
+      p::selection {
+        background-color: violet;
+      }
+      h1::before {
+        content: "Hi ";
+      }
+      h1::after{
+        content: "!";
+      }
+      input::placeholder{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt odio
+      officiis mollitia alias. Alias aliquam adipisci, eius qui praesentium eum
+      fuga, exercitationem, doloremque voluptate expedita aperiam iure
+      repudiandae mollitia nostrum!
+    </p>
+    <h1>Heading</h1>
+    <input type="text" placeholder="Enter your name">
+  </body>
+</html>
