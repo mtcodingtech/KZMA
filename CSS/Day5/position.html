@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .card {
+        width: 300px;
+        height: 320px;
+        background-color: red;
+        margin: 50px auto;
+        position: relative;
+        /* top: 50px;
+            left: 100px; */
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .card img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+      }
+      .card .content {
+        background-color: rgba(232, 53, 83, 0.811);
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      .para {
+        height: 1200px;
+        background-color: pink;
+      }
+      button {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+      }
+      .heading{
+        background-color: orangered;
+        padding: 1.5rem;
+        color: #fff;
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="card1">
+      <img
+        src="https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="img"
+      />
+      <div class="content">
+        <h2>Hello Heading</h2>
+        <p>This is p</p>
+      </div>
+    </div>
+    <h2 class="heading">Heading 2</h2>
+    <p class="para">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt cumque
+      expedita eum, aliquam mollitia amet labore culpa dicta facilis obcaecati
+      accusamus est? Ipsum similique facere distinctio tempore iure molestiae
+      rerum!
+    </p>
+    <a href="#card1">
+      <button>Go to top</button>
+    </a>
+  </body>
+</html>
