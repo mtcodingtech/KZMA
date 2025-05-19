@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        /* flex-direction: row;
+        flex-wrap: wrap; */
+        flex-flow: row wrap;
+      }
+      .container .item {
+        width: 100px;
+        height: 100px;
+        background-color: orangered;
+        color: #fff;
+      }
+      .item-1{
+        order: 2;
+        flex-basis: 50%;
+        /* flex-grow: 2; */
+      }
+      .item-2{
+        order: 3;
+        /* flex-grow: 3; */
+        /* align-self: flex-end; */
+      }
+      .item-3{
+        /* flex-grow: 1; */
+        order: 1;
+        /* align-self: flex-start; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">1</div>
+      <div class="item item-2">2</div>
+      <div class="item item-3">3</div>
+    </div>
+  </body>
+</html>
