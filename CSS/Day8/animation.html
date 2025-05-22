@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: hotpink;
+        margin: 50px auto;
+      }
+      .box:hover {
+        animation-name: myAnimate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes changeColor {
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: aqua;
+        }
+      }
+      @keyframes myAnimate {
+        0% {
+          background-color: yellow;
+          transform: rotate(0deg);
+        }
+        50% {
+          background-color: blue;
+        }
+        80% {
+          background-color: pink;
+          /* transform: translateX(300px); */
+        }
+        100% {
+          background-color: orangered;
+          transform: rotate(360deg);
+          /* border-radius: 50%; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Box</div>
+    <h1 class="animate__animated animate__fadeInUp">An animated element</h1>
+  </body>
+</html>
