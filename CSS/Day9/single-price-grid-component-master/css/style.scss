@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+$White: #fff;
+$padding: 1.6rem;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-size: 16px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: $Light-Gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    max-width: 520px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px $Grayish-Blue;
+    overflow: hidden;
+    @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: fit-content fit-content;
+    }
+    .join,
+    .sub,
+    .why {
+      padding: $padding;
+    }
+    .join {
+      background-color: $White;
+      grid-column: 1 / 3;
+      h3 {
+        color: $Cyan;
+        font-weight: 700;
+      }
+      .subtitle {
+        color: $Bright-Yellow;
+        margin: 1rem 0 0.5rem;
+         font-weight: 700;
+      }
+      .description {
+        color: $Grayish-Blue;
+        line-height: 1.2;
+        font-size: 14px;
+      }
+    }
+    .sub {
+      background-color: $Cyan;
+      h4 {
+      }
+      .price {
+      }
+      p {
+      }
+      button {
+      }
+    }
+    .why {
+      background-color: lighten($Cyan, 20%);
+      h4 {
+      }
+      p {
+      }
+    }
+  }
+}

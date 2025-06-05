@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 75%, 39%);
+  position: relative;
+}
+@media (min-width: 992px) {
+  .container::before {
+    content: "";
+    width: 50%;
+    height: 60%;
+    background-image: url("../images/bg-pattern-top.svg");
+    background-position: bottom right;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .container::after {
+    content: "";
+    width: 50%;
+    height: 60%;
+    background-image: url("../images/bg-pattern-bottom.svg");
+    background-size: 100%;
+    position: absolute;
+    bottom: 0rem;
+    right: -5rem;
+    z-index: 1;
+    background-repeat: no-repeat;
+  }
+}
+.container .card {
+  max-width: 300px;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.container .card .card-bg {
+  width: 100%;
+}
+.container .card .card-content {
+  background-color: #fff;
+  margin-top: -4px;
+  position: relative;
+}
+.container .card .card-content .person-img {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 30%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  inset: 0;
+  margin: -14% auto 0;
+}
+.container .card .card-content .profile {
+  padding-top: 20%;
+  text-align: center;
+}
+.container .card .card-content .profile h1 {
+  font-size: 1rem;
+}
+.container .card .card-content .profile h1 span {
+  color: hsl(0, 0%, 59%);
+}
+.container .card .card-content .profile p {
+  color: hsl(0, 0%, 59%);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+.container .card hr {
+  margin: 1rem 0;
+}
+.container .card .stats-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1.3rem;
+}
+.container .card .stats-container .stats {
+  text-align: center;
+}
+.container .card .stats-container .stats h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.container .card .stats-container .stats p {
+  color: hsl(227, 10%, 46%);
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  margin-top: 0.2rem;
+}/*# sourceMappingURL=style.css.map */

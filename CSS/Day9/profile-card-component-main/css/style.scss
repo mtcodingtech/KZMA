@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+$Dark-cyan: hsl(185, 75%, 39%);
+$Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$Dark-grayish-blue: hsl(227, 10%, 46%);
+$Dark-gray: hsl(0, 0%, 59%);
+$White: #fff;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+}
+body {
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 18px;
+  font-weight: 700;
+  color: $Very-dark-desaturated-blue;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $Dark-cyan;
+  position: relative;
+  
+  @media (min-width: 992px) {
+    &::before {
+      content: "";
+      width: 50%;
+      height: 60%;
+      background-image: url("../images/bg-pattern-top.svg");
+      background-position: bottom right;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      width: 50%;
+      height: 60%;
+      background-image: url("../images/bg-pattern-bottom.svg");
+      // background-position: bottom right;
+      background-size: 100%;
+      position: absolute;
+      bottom: 0rem;
+      right: -5rem;
+      z-index: 1;
+      background-repeat: no-repeat;
+    }
+  }
+  .card {
+    max-width: 300px;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    .card-bg {
+      width: 100%;
+    }
+    .card-content {
+      background-color: $White;
+      margin-top: -4px;
+      position: relative;
+      .person-img {
+        border-radius: 50%;
+        border: 5px solid $White;
+        width: 30%;
+        object-fit: contain;
+        position: absolute;
+        inset: 0;
+        margin: -14% auto 0;
+      }
+      .profile {
+        padding-top: 20%;
+        text-align: center;
+        h1 {
+          font-size: 1rem;
+          span {
+            color: $Dark-gray;
+          }
+        }
+        p {
+          color: $Dark-gray;
+          font-size: 0.8rem;
+          margin-top: 0.3rem;
+        }
+      }
+    }
+
+    hr {
+      margin: 1rem 0;
+    }
+    .stats-container {
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 1.3rem;
+      .stats {
+        text-align: center;
+        h2 {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+        p {
+          color: $Dark-grayish-blue;
+          font-size: 0.6rem;
+          letter-spacing: 1px;
+          margin-top: 0.2rem;
+        }
+      }
+    }
+  }
+}
