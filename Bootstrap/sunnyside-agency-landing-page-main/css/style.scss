@@ -10,7 +10,7 @@ $Grey-600: hsl(213, 9%, 39%);
 $Grey-550: hsl(232, 10%, 55%);
 $Grey-400: hsl(210, 4%, 67%);
 $White: hsl(0, 100%, 100%);
-
+$Width: 992px;
 * {
   padding: 0;
   margin: 0;
@@ -24,19 +24,45 @@ h2,
 h3,
 h4,
 h5,
-h6, .custom-btn {
+h6,
+.custom-btn {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
 }
-.hero-section{
+.hero-section {
+  min-height: 80vh;
+  background-image: url("../images/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  @media (min-width: $Width) {
     min-height: 100vh;
-    background-image: url("../images/mobile/image-header.jpg");
     background-size: contain;
-    background-position: center;
-    @media (min-width: 992px) {
-          background-image: url("../images/desktop/image-header.jpg");
+    background-image: url("../images/desktop/image-header.jpg");
+  }
+  h1 {
+    letter-spacing: 4px;
+    font-size: clamp(2rem, 3vw, 3rem);
+    // font-size: 2rem;
+    // @media (min-width: $Width) {
+    //   font-size: 3rem;
+    // }
+  }
+  .arrow-icon {
+    width: 20px;
+    height: auto;
+  }
+}
+
+.info-section {
+  .info {
+    @media (min-width: $Width) {
+      max-width: 70%;
     }
+    h3 {
+      font-size: 2rem;
+    }
+  }
 }
